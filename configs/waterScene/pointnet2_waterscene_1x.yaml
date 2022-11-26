@@ -1,0 +1,12 @@
+
+DATASETS:
+  TRAIN: ("waterscene_train", )
+  TEST: ("waterscene_test",)
+
+SOLVER:
+  BASE_LR: 0.005
+  WEIGHT_DECAY: 0.0001
+  STEPS: (60000, 80000)
+  MAX_ITER: 120000
+  IMS_PER_BATCH: 4
+  WARMUP_METHOD: "constant"

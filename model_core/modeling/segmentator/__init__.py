@@ -1,0 +1,1 @@
+from .segmentators import build_segmentation_model
