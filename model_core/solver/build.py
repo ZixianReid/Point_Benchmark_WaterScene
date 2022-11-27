@@ -5,7 +5,7 @@ from .lr_scheduler import WarmupMultiStepLR
 
 
 def make_optimizer(cfg, model):
-    logger = logging.getLogger("fusion_core.trainer")
+    logger = logging.getLogger("model_core.trainer")
     params = []
     for key, value in model.named_parameters():
         if not value.requires_grad:

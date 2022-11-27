@@ -1,4 +1,4 @@
-from fusion_core.data import datasets
+from model_core.data import datasets
 
 from .coco import coco_evaluation
 

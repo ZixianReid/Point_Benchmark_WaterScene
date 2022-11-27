@@ -2,9 +2,9 @@
 import torch
 import torchvision
 
-from fusion_core.structures.bounding_box import BoxList
-from fusion_core.structures.segmentation_mask import SegmentationMask
-from fusion_core.structures.keypoint import PersonKeypoints
+from model_core.structures.bounding_box import BoxList
+from model_core.structures.segmentation_mask import SegmentationMask
+from model_core.structures.keypoint import PersonKeypoints
 
 
 min_keypoints_per_image = 10

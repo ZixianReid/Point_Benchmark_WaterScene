@@ -5,10 +5,8 @@ import time
 
 import torch
 import torch.distributed as dist
-from fusion_core.utils.comm import get_world_size, is_pytorch_1_1_0_or_later
-from fusion_core.utils.metric_logger import MetricLogger
-from ..data import make_data_loader
-from ..utils.comm import synchronize
+from model_core.utils.comm import get_world_size, is_pytorch_1_1_0_or_later
+from model_core.utils.metric_logger import MetricLogger
 import torch.nn.functional as F
 
 def reduce_loss_dict(loss_dict):
@@ -49,7 +47,7 @@ def do_train(
         cfg,
         distributed
 ):
-    logger = logging.getLogger("fusion_core.trainer")
+    logger = logging.getLogger("model_core.trainer")
     logger.info("Start training")
     meters = MetricLogger(delimiter="  ")
     max_iter = len(data_loader)

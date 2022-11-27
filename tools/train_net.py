@@ -118,7 +118,7 @@ def main():
     if output_dir:
         mkdir(output_dir)
 
-    logger = setup_logger("fusion_core", output_dir, get_rank())
+    logger = setup_logger("model_core", output_dir, get_rank())
     logger.info("Using {} GPUs".format(num_gpus))
     logger.info(args)
 

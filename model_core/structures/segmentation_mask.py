@@ -1,8 +1,6 @@
 import cv2
 import copy
 import torch
-import numpy as np
-from fusion_core.layers.misc import interpolate
 
 import pycocotools.mask as mask_utils
 
