@@ -20,7 +20,7 @@ def inference(model, data_loader, device):
         sizes = (pc.ptr[1:] - pc.ptr[:-1]).tolist()
         for out, y, target in zip(outs.split(sizes), pc.y.split(sizes), targets):
             label = CODE_LABEL_STR[target.extra_fields['labels'].numpy()[0]]
-            iou = jaccard_index(out.argmax(dim=-1), y, num_classes=6, absent_score=1.0)
+            iou = jaccard_index(out.argmax(dim=-1), y, num_classes=6, absent_score=0.0)
             ious.append(iou)
             ious_dict[label].append(iou)
 

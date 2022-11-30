@@ -9,10 +9,27 @@ _C = CN()
 _C.MODEL = CN()
 _C.MODEL.DEVICE = "cuda"
 _C.MODEL.META_ARCHITECTURE = "PointNet2"
+_C.MODEL.WEIGHT = ""
 
+# -----------------------------------------------------------------------------
+# Pointnet2
+# -----------------------------------------------------------------------------
 _C.MODEL.POINTNET2 = CN()
 _C.MODEL.POINTNET2.NUM_CLASSES = 6
-_C.MODEL.WEIGHT = ""
+
+
+# -----------------------------------------------------------------------------
+# Pointransformer
+# -----------------------------------------------------------------------------
+_C.MODEL.POINT_TRANSFORMER = CN()
+_C.MODEL.POINT_TRANSFORMER.NUM_CLASSES = 6
+_C.MODEL.POINT_TRANSFORMER.IN_CHANNELS = 5
+_C.MODEL.POINT_TRANSFORMER.DIM_MODEL = [32, 64, 128, 256, 512]
+_C.MODEL.POINT_TRANSFORMER.K = 16
+
+
+
+
 # -----------------------------------------------------------------------------
 # Dataset
 # -----------------------------------------------------------------------------
@@ -105,6 +122,6 @@ _C.SOLVER.IMS_PER_BATCH = 8
 # ---------------------------------------------------------------------------- #
 # Misc options
 # ---------------------------------------------------------------------------- #
-_C.OUTPUT_DIR = "/mnt/develop/PycharmProjects/Point_Benchmark_WaterScene/tmp"
+_C.OUTPUT_DIR = "/mnt/develop/PycharmProjects/Point_Benchmark_WaterScene/point_transfomer"
 
 _C.PATHS_CATALOG = os.path.join(os.path.dirname(__file__), "paths_catalog.py")

@@ -73,7 +73,7 @@ def main():
     parser = argparse.ArgumentParser(description="PyTorch Object Detection Training")
     parser.add_argument(
         "--config-file",
-        default="/mnt/develop/PycharmProjects/Point_Benchmark_WaterScene/configs/waterScene/pointnet2_waterscene_1x.yaml",
+        default="/mnt/develop/PycharmProjects/Point_Benchmark_WaterScene/configs/waterScene/point_transformer_waterscene_1x.yaml",
         metavar="FILE",
         help="path to config file",
         type=str,
